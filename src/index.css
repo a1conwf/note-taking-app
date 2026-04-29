@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+	/********** Colors **********/
+
+	/* Neutral */
+	--color-neutral-950: #0e121b;
+	--color-neutral-900: #191b25;
+	--color-neutral-800: #232530;
+	--color-neutral-700: #2b303b;
+	--color-neutral-600: #525866;
+	--color-neutral-500: #717784;
+	--color-neutral-400: #99a0ae;
+	--color-neutral-300: #cacfd8;
+	--color-neutral-200: #e0e4ea;
+	--color-neutral-100: #f3f5f8;
+	--color-neutral-50: #f5f7fa;
+	--color-neutral-0: #ffffff;
+
+	/* Blue */
+	--color-blue-700: #2547d0;
+	--color-blue-500: #335cff;
+	--color-blue-50: #ebf1ff;
+
+	/* Green */
+	--color-green-500: #21c16b;
+	--color-green-100: #d1fbe9;
+
+	/* Red */
+	--color-red-500: #fb3648;
+	--color-red-100: #ffd5e8;
+
+	/********** Fonts **********/
+	--font-sans-serif: "Inter", sans-serif;
+	--font-serif: "Noto Serif", serif;
+	--font-monospace: "Source Code Pro", monospace;
+
+	/********** Shadows **********/
+	--shadow-sm: 0px 4px 6px 0px (rgba(240, 240, 240, 0.6));
+	--shadow-lg: 0px 8px 12px 0px (rgba(240, 240, 240, 0.6));
+	--shadow-double-ring: 0 0 0 2px #fff, 0 0 0 4px var(--color-neutral-400);
+}
+
+@layer base {
+	button {
+		@apply cursor-pointer;
+	}
+}
+
+@layer components {
+	.wrapper {
+		@apply mx-auto px-4 sm:max-w-[540px] sm:px-0 md:max-w-[704px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px];
+	}
+}
