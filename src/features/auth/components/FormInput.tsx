@@ -37,10 +37,7 @@ const FormInput = React.forwardRef<HTMLInputElement, FormInputProps>(
 		return (
 			<div className="flex flex-col gap-2">
 				<div className="flex items-center">
-					<label
-						htmlFor={name}
-						className="text-sm font-medium text-neutral-950 leading-[1.3] tracking[-0.2px]"
-					>
+					<label htmlFor={name} className="text-preset-4 text-neutral-950">
 						{label} {required && <span className="text-red-500">*</span>}
 					</label>
 					{trailingLabel && <div className="ml-auto">{trailingLabel}</div>}
@@ -56,7 +53,7 @@ const FormInput = React.forwardRef<HTMLInputElement, FormInputProps>(
 						required={required}
 						disabled={disabled}
 						className={cn(
-							"w-full py-3 pl-4 outline-none border border-neutral-300 rounded-lg text-sm text-neutral-950 leading-[1.3] tracking[-0.2px] transition-all duration-300 placeholder:text-neutral-500 hover:bg-neutral-50 focus:shadow-double-ring focus:border-neutral-950 ",
+							"w-full py-3 pl-4 outline-none border border-neutral-300 rounded-lg text-preset-5 text-neutral-950 transition-all duration-300 placeholder:text-neutral-500 hover:bg-neutral-50 focus:shadow-double-ring focus:border-neutral-950 ",
 							type === "password" && "pr-10",
 							disabled && "bg-neutral-50 text-neutral-300 cursor-not-allowed",
 							error && "border-red-500 focus:border-red-500 focus:shadow-none",
@@ -84,7 +81,7 @@ const FormInput = React.forwardRef<HTMLInputElement, FormInputProps>(
 				{error && (
 					<div className="flex items-center gap-1">
 						<img src={iconInfo} alt="info-icon" className="w-4 h-4" />
-						<p className="text-xs text-red-500">{error}</p>
+						<p className="text-xs leading-[1.4] text-red-500">{error}</p>
 					</div>
 				)}
 			</div>

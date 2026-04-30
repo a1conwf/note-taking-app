@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import { useAuthStore } from "../store/useAuthStore";
 
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui";
 import { FormInput, AuthSocialLogin, AuthSwitchLink } from "../components";
 
 import { ROUTES } from "@/constants/routes";
@@ -37,7 +37,7 @@ const LoginForm: React.FC = () => {
 		try {
 			await login(data.email, data.password);
 			reset();
-			navigate(ROUTES.HOME);
+			navigate(ROUTES.ALL_NOTES);
 			toast.success("Welcome to Notes!");
 		} catch (error) {
 			toast.error(error instanceof Error ? error.message : "An unknown error occurred");

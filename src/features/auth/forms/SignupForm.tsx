@@ -7,7 +7,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { AuthSocialLogin, FormInput, AuthSwitchLink, PasswordHint } from "../components";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui";
 
 import { useAuthStore } from "../store/useAuthStore";
 
@@ -38,7 +38,7 @@ const SignupForm: React.FC = () => {
 		try {
 			await signup(data.email, data.password);
 			reset();
-			navigate(ROUTES.HOME);
+			navigate(ROUTES.ALL_NOTES);
 			toast.success("Please check your email to confirm your account.");
 		} catch (error) {
 			toast.error(error instanceof Error ? error.message : "An unknown error occurred");

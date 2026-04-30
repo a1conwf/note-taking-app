@@ -16,7 +16,7 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
 	}
 
 	if (user) {
-		return <Navigate to={ROUTES.HOME} replace />;
+		return <Navigate to={ROUTES.ALL_NOTES} replace />;
 	}
 
 	return (

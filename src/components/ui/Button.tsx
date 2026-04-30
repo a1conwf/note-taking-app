@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
 	return (
 		<button
 			className={cn(
-				"w-full flex items-center justify-center gap-2 border border-transparent px-4 py-3 rounded-lg text-sm font-medium outline-none leading-[1.2] tracking-[-0.2px] focus:shadow-double-ring transition-all duration-300",
+				"w-full flex items-center justify-center gap-2 border border-transparent px-4 py-3 rounded-lg text-preset-3 outline-none focus:shadow-double-ring transition-all duration-300",
 				variant === "primary" && " bg-blue-500 text-white hover:bg-blue-700",
 				variant === "secondary" &&
 					"bg-neutral-100 text-neutral-600 hover:bg-white hover:text-neutral-950 hover:border-neutral-300 focus:border-neutral-950",

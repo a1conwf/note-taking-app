@@ -13,6 +13,7 @@
     "@hookform/resolvers": "^5.2.2",
     "@supabase/supabase-js": "^2.105.1",
     "@tailwindcss/vite": "^4.2.4",
+    "@tanstack/react-query": "^5.100.6",
     "clsx": "^2.1.1",
     "lucide-react": "^1.11.0",
     "react": "^19.2.5",
@@ -37,6 +38,7 @@
     "globals": "^17.5.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.2",
-    "vite": "^8.0.10"
+    "vite": "^8.0.10",
+    "vite-plugin-svgr": "^5.2.0"
   }
 }

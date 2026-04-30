@@ -15,11 +15,8 @@ const AuthFormCard: React.FC<AuthFormCardProps> = ({ title, description, childre
 				<Logo />
 
 				<div className="mb-10 text-center">
-					<h1 className="mb-2 text-neutral-950 text-2xl font-bold leading-[1.2] tracking-[-0.5px]">
-						{title}
-					</h1>
-
-					<p className="text-neutral-600 text-sm leading-[1.3] tracking-[-0.2px]">{description}</p>
+					<h1 className="mb-2 text-neutral-950 text-preset-1">{title}</h1>
+					<p className="text-neutral-600 text-preset-5">{description}</p>
 				</div>
 			</div>
 

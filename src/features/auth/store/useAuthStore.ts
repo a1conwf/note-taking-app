@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 import type { User } from "@supabase/supabase-js";
-import { supabase } from "../lib/supabaseClient";
+import { supabase } from "@/lib/supabaseClient";
 
 import { ROUTES } from "@/constants/routes";
 
@@ -76,7 +76,7 @@ export const useAuthStore = create<AuthStore>((set) => ({
 			const { data, error } = await supabase.auth.signInWithOAuth({
 				provider: "google",
 				options: {
-					redirectTo: `${window.location.origin}${ROUTES.HOME}`,
+					redirectTo: `${window.location.origin}${ROUTES.ALL_NOTES}`,
 				},
 			});
 

@@ -6,7 +6,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { FormInput } from "../components";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui";
 
 import { forgotPasswordSchema } from "../schemas";
 import { useAuthStore } from "../store/useAuthStore";

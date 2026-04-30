@@ -19,9 +19,7 @@ const AuthSocialLogin: React.FC = () => {
 	};
 	return (
 		<div className="border-t border-neutral-200 pt-6 flex flex-col items-center gap-4">
-			<span className="text-sm text-neutral-600 leading-[1.3] tracking-[-0.2px]">
-				Or log in with:
-			</span>
+			<span className="text-preset-5 text-neutral-600">Or log in with:</span>
 
 			<Button
 				variant="border"
@@ -30,7 +28,7 @@ const AuthSocialLogin: React.FC = () => {
 				onClick={handleLoginWithGoogle}
 			>
 				<img src={iconGoogle} alt="google" />
-				<span>Google</span>
+				<span className="color-neutral-950 tracking-[0.5px]">Google</span>
 			</Button>
 		</div>
 	);

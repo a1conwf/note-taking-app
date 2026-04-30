@@ -3,7 +3,7 @@ import { AuthLayout, MainLayout } from "@/app/layouts";
 import { ROUTES } from "@/constants/routes";
 
 import { Login, ForgotPassword, Signup, ResetPassword } from "@/pages/auth";
-import HomePage from "@/pages/HomePage";
+import { AllNotesPage, ArchivedNotesPage } from "@/pages/notes";
 
 export const router = createBrowserRouter([
 	{
@@ -39,8 +39,12 @@ export const router = createBrowserRouter([
 		),
 		children: [
 			{
-				path: ROUTES.HOME,
-				element: <HomePage />,
+				path: ROUTES.ALL_NOTES,
+				element: <AllNotesPage />,
+			},
+			{
+				path: ROUTES.ARCHIVED_NOTES,
+				element: <ArchivedNotesPage />,
 			},
 		],
 	},
