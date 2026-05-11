@@ -7,10 +7,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import { useAuthStore } from "../store/useAuthStore";
 
-import { Button } from "@/components/ui";
+import { Button } from "@/shared/components/ui";
 import { FormInput, AuthSocialLogin, AuthSwitchLink } from "../components";
 
-import { ROUTES } from "@/constants/routes";
+import { ROUTES } from "@/shared/data";
 import { loginSchema } from "../schemas";
 
 const LoginForm: React.FC = () => {

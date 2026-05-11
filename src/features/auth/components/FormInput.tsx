@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/lib/utils";
 
 import iconShowPassword from "@/assets/icon-show-password.svg";
 import iconHidePassword from "@/assets/icon-hide-password.svg";
@@ -53,7 +53,7 @@ const FormInput = React.forwardRef<HTMLInputElement, FormInputProps>(
 						required={required}
 						disabled={disabled}
 						className={cn(
-							"w-full py-3 pl-4 outline-none border border-neutral-300 rounded-lg text-preset-5 text-neutral-950 transition-all duration-300 placeholder:text-neutral-500 hover:bg-neutral-50 focus:shadow-double-ring focus:border-neutral-950 ",
+							"w-full py-3 pl-4 outline-none cursor-pointer border border-neutral-300 rounded-lg text-preset-5 text-neutral-950 transition-all duration-300 placeholder:text-neutral-500 hover:bg-neutral-50 focus:shadow-double-ring focus:border-neutral-950 ",
 							type === "password" && "pr-10",
 							disabled && "bg-neutral-50 text-neutral-300 cursor-not-allowed",
 							error && "border-red-500 focus:border-red-500 focus:shadow-none",

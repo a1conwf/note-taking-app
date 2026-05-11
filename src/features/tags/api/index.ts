@@ -1,4 +1,4 @@
-import { supabase } from "@/lib/supabaseClient";
+import { supabase } from "@/shared/lib/supabaseClient";
 
 export const getTags = async () => {
 	const { data, error } = await supabase.from("tags").select("*");

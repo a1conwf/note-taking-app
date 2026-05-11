@@ -1,22 +1,19 @@
 import React from "react";
 import { Link, useLocation } from "react-router";
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/lib/utils";
+
+import type { Tag } from "../types";
 
 import TagIcon from "@/assets/icon-tag.svg?react";
-
 import arrowRight from "@/assets/icon-chevron-right.svg";
 
-type TagItemProps = {
-	label: string;
-};
-
-const TagItem: React.FC<TagItemProps> = ({ label }) => {
+const TagItem: React.FC<Tag> = ({ name }) => {
 	const { pathname } = useLocation();
-	const isActive = pathname === `/tag/${label}`;
+	const isActive = pathname === `/tag/${name}`;
 
 	return (
 		<Link
-			to={`/tag/${label}`}
+			to={`/tags/${name}`}
 			className="group flex items-center gap-2 px-3 py-3 transition-all duration-300 hover:bg-neutral-100 hover:rounded-lg"
 		>
 			<TagIcon
@@ -28,7 +25,7 @@ const TagItem: React.FC<TagItemProps> = ({ label }) => {
 			/>
 
 			<span className={cn("text-preset-4", isActive ? "text-neutral-950" : "text-neutral-700")}>
-				{label}
+				{name}
 			</span>
 
 			{isActive && <img src={arrowRight} alt="arrow-right-icon" className="w-6 h-6 ml-auto" />}

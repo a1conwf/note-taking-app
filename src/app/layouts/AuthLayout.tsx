@@ -1,7 +1,7 @@
 import { Navigate } from "react-router";
 
 import { useAuthStore } from "@/features/auth/store/useAuthStore";
-import { ROUTES } from "@/constants/routes";
+import { ROUTES } from "@/shared/data/routes";
 
 type AuthLayoutProps = {
 	children: React.ReactNode;

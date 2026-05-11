@@ -3,7 +3,7 @@ import { toast } from "react-hot-toast";
 
 import { useAuthStore } from "../store/useAuthStore";
 
-import Button from "@/components/ui/Button";
+import { Button } from "@/shared/components/ui";
 
 import iconGoogle from "@/assets/icon-google.svg";
 

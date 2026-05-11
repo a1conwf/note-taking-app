@@ -1,9 +1,9 @@
 import { create } from "zustand";
 
 import type { User } from "@supabase/supabase-js";
-import { supabase } from "@/lib/supabaseClient";
+import { supabase } from "@/shared/lib/supabaseClient";
 
-import { ROUTES } from "@/constants/routes";
+import { ROUTES } from "@/shared/data/routes";
 
 interface AuthStore {
 	user: User | null;

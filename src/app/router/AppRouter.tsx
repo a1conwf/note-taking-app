@@ -1,9 +1,10 @@
 import { createBrowserRouter, Outlet } from "react-router";
 import { AuthLayout, MainLayout } from "@/app/layouts";
-import { ROUTES } from "@/constants/routes";
+import { ROUTES } from "@/shared/data/routes";
 
-import { Login, ForgotPassword, Signup, ResetPassword } from "@/pages/auth";
-import { AllNotesPage, ArchivedNotesPage } from "@/pages/notes";
+import { Login, ForgotPassword, Signup, ResetPassword } from "@/features/auth/pages";
+import { AllNotesPage, ArchivedNotesPage, CreateNotePage } from "@/features/notes/pages";
+import SelectedTagPage from "@/features/tags/pages/SelectedTagPage";
 
 export const router = createBrowserRouter([
 	{
@@ -45,6 +46,14 @@ export const router = createBrowserRouter([
 			{
 				path: ROUTES.ARCHIVED_NOTES,
 				element: <ArchivedNotesPage />,
+			},
+			{
+				path: ROUTES.SELECTED_TAG,
+				element: <SelectedTagPage />,
+			},
+			{
+				path: ROUTES.CREATE_NOTE,
+				element: <CreateNotePage />,
 			},
 		],
 	},

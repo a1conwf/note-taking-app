@@ -7,12 +7,12 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { AuthSocialLogin, FormInput, AuthSwitchLink, PasswordHint } from "../components";
-import { Button } from "@/components/ui";
+import { Button } from "@/shared/components/ui";
 
 import { useAuthStore } from "../store/useAuthStore";
 
 import { signupSchema } from "../schemas";
-import { ROUTES } from "@/constants/routes";
+import { ROUTES } from "@/shared/data";
 
 const SignupForm: React.FC = () => {
 	const navigate = useNavigate();

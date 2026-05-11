@@ -1,6 +1,6 @@
 import React from "react";
 
-import Logo from "@/components/ui/Logo";
+import Logo from "@/shared/components/ui/Logo";
 
 type AuthFormCardProps = {
 	title: string;

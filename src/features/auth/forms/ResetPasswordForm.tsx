@@ -7,11 +7,11 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { FormInput, PasswordHint } from "../components";
-import { Button } from "@/components/ui";
+import { Button } from "@/shared/components/ui";
 
 import { resetPasswordSchema } from "../schemas";
 import { useAuthStore } from "../store/useAuthStore";
-import { ROUTES } from "@/constants/routes";
+import { ROUTES } from "@/shared/data";
 
 const ResetPasswordForm: React.FC = () => {
 	const navigate = useNavigate();
