@@ -15,6 +15,6 @@ export type NoteTag = {
 
 export type NoteFilters = {
 	archived?: boolean;
-	tagIds?: string[];
+	tagName?: string;
 	search?: string;
 };

@@ -4,7 +4,7 @@ import { ROUTES } from "@/shared/data/routes";
 
 import { Login, ForgotPassword, Signup, ResetPassword } from "@/features/auth/pages";
 import { AllNotesPage, ArchivedNotesPage, CreateNotePage } from "@/features/notes/pages";
-import SelectedTagPage from "@/features/tags/pages/SelectedTagPage";
+import { SelectedTagPage, TagsPage } from "@/features/tags/pages";
 
 export const router = createBrowserRouter([
 	{
@@ -50,6 +50,10 @@ export const router = createBrowserRouter([
 			{
 				path: ROUTES.SELECTED_TAG,
 				element: <SelectedTagPage />,
+			},
+			{
+				path: ROUTES.TAGS,
+				element: <TagsPage />,
 			},
 			{
 				path: ROUTES.CREATE_NOTE,

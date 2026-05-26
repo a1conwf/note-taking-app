@@ -53,7 +53,7 @@ const NoteList: React.FC<NoteListProps> = ({ filters }) => {
 		return (
 			<ul className="flex flex-col gap-2 pb-4 md:pb-8 lg:pb-0">
 				{Array.from({ length: 6 }, (_, index) => (
-					<li key={index} className="pb-2 border-b border-neutral-200">
+					<li key={index} className="pb-2 border-b border-neutral-200 last:border-b-0">
 						<NoteListItemSkeleton />
 					</li>
 				))}
@@ -68,7 +68,7 @@ const NoteList: React.FC<NoteListProps> = ({ filters }) => {
 	return (
 		<ul className="flex flex-col gap-2 pb-4 md:pb-8 lg:pb-0">
 			{notes.map((note) => (
-				<li key={note.id} className="pb-2 border-b border-neutral-200">
+				<li key={note.id} className="pb-2 border-b border-neutral-200 last:border-b-0">
 					<NoteListItem note={note} />
 				</li>
 			))}

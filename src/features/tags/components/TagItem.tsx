@@ -9,12 +9,15 @@ import arrowRight from "@/assets/icon-chevron-right.svg";
 
 const TagItem: React.FC<Tag> = ({ name }) => {
 	const { pathname } = useLocation();
-	const isActive = pathname === `/tag/${name}`;
+	const isActive = pathname === `/tags/${name}`;
 
 	return (
 		<Link
 			to={`/tags/${name}`}
-			className="group flex items-center gap-2 px-3 py-3 transition-all duration-300 hover:bg-neutral-100 hover:rounded-lg"
+			className={cn(
+				"group flex items-center gap-2 px-3 py-3 transition-all duration-300 hover:bg-neutral-100 hover:rounded-lg",
+				isActive ? "bg-neutral-100 rounded-lg" : "",
+			)}
 		>
 			<TagIcon
 				className={cn(

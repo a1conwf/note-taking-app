@@ -10,7 +10,7 @@ const TagList: React.FC = () => {
 		return (
 			<ul className="custom-scrollbar flex max-h-[calc(100vh-10rem)] flex-col overflow-y-auto pr-2">
 				{Array.from({ length: 6 }, (_, index) => (
-					<li key={index} className="pb-2 border-b border-neutral-200">
+					<li key={index} className="pb-2">
 						<TagItemSkeleton />
 					</li>
 				))}
@@ -29,7 +29,7 @@ const TagList: React.FC = () => {
 	}
 
 	return (
-		<ul className="custom-scrollbar flex max-h-[calc(100vh-10rem)] flex-col overflow-y-auto pr-2">
+		<ul className="custom-scrollbar flex max-h-[calc(100vh-10rem)] flex-col overflow-y-auto pr-2 gap-1">
 			{tags?.map((tag) => (
 				<li key={tag.id}>
 					<TagItem {...tag} />

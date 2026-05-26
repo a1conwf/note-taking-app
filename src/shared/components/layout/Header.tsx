@@ -7,7 +7,7 @@ import { ROUTES } from "@/shared/data/routes";
 import iconSettings from "@/assets/icon-settings.svg";
 
 type HeaderProps = {
-	title: string;
+	title: React.ReactNode;
 };
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
